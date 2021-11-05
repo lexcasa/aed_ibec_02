@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            console.log("hola!")
+            let arr = [1, 2, 3, 2, 5, 2]
+            let output = []
+            for (let i = 0; i < arr.length; i++){
+                let count = 0
+                for(let j = 0; j < arr.length; j++){
+                    if(arr[j] === arr[i]){
+                        count++
+                    }
+                }
+
+                if(count > 1 && !output.includes(arr[i])){
+                    output.push(arr[i])
+                }
+                console.log("elemento: ", arr[i], " veces: ", count)
+            }
+            console.log("output: ", output)
+        </script>
+    </body>
+</html>
