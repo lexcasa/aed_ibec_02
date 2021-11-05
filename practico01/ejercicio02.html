@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let input = [1, 2, "B","C","B"]
+            let w = []
+            let z = []
+
+            for (let i = 0; i < input.length; i++){
+                if(typeof input[i] === 'number'){
+                    w.push(input[i])
+                } else if(typeof input[i] === 'string'){
+                    z.push(input[i])
+                }
+            }
+            console.log(w)
+            console.log(z)
+        </script>
+    </body>
+</html>
