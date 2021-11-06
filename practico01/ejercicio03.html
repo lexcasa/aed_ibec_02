@@ -1,0 +1,16 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let input = ["Aba","AAb","b","B"]
+            let flag = "ab"
+            let out = []
+            for (let i = 0; i < input.length; i++){
+                if(input[i].toLocaleLowerCase().includes( flag.toLocaleLowerCase() )){
+                    out.push( input[i] )
+                }
+            }
+            console.log(out)
+        </script>
+    </body>
+</html>
