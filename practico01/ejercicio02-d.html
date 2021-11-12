@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            // Input
+            // Vamos a recorrer el input verificando el type de c/elemento
+            // Al obtener el type de c/elemento vamos a verificar
+            // Si ese type existe en w
+            const input =  [1,true,"B","C"]
+            const w     = ['string','number']
+            let z       = []
+
+            for(let i = 0; i < input.length; i++){
+                if(w.includes( typeof input[i] )){
+                   z.push(input[i]) 
+                }
+            }
+            console.log(z)
+        </script>
+    </body>
+</html>
