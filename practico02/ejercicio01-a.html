@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            const bubble = function (arr){
+                for (let i = 0; i < arr.length; i++){
+                    for (let j = 0; j < arr.length; j++){
+                        // Es el actual mayor que el siguiente?
+                        if(arr[j] > arr[j+1]){
+                            // Guardo 10 en tmp
+                            let tmp = arr[j]
+                            // paso el 5 en el lugar del 10
+                            arr[j] = arr[j+1]
+                            // Donde estaba 5 le paso el 10
+                            arr[j+1] = tmp
+                        }
+                    }
+                }
+                return arr
+            }
+
+            const input =  [1, 2, 3, "A", "A", "B", 2, 2]
+            let output  = []
+            let arrString = []
+            let arrNumber = []
+
+            for(let i = 0; i < input.length; i++){
+                if(typeof input[i] === 'string'){
+                    arrString.push(input[i])
+                } else if (typeof input[i] === 'number'){
+                    arrNumber.push(input[i])
+                }
+            }
+
+            // Ordenando
+            arrNumber = bubble(arrNumber)
+            arrString = bubble(arrString)
+
+            output = arrNumber.concat(arrString)
+
+            console.log(output)
+
+        </script>
+    </body>
+</html>

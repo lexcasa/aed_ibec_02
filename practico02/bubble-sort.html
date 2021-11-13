@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            const input = [10, 5, 6, 2, 11, 3]
+            // [2,3,5,6,10,11]
+            const bubble = function (arr){
+                for (let i = 0; i < arr.length; i++){
+                    for (let j = 0; j < arr.length; j++){
+                        // Es el actual mayor que el siguiente?
+                        if(arr[j] > arr[j+1]){
+                            // Guardo 10 en tmp
+                            let tmp = arr[j]
+                            // paso el 5 en el lugar del 10
+                            arr[j] = arr[j+1]
+                            // Donde estaba 5 le paso el 10
+                            arr[j+1] = tmp
+                        }
+                    }
+                    console.log("ordenando: ", arr)
+                }
+                return arr
+            }
+            console.log( bubble(input) )
+        </script>
+    </body>
+</html>
