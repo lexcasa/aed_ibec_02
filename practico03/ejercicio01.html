@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ram = [1,1,2]
+        const cpu = [2,1,30]
+
+        // Primera parte
+        const pOpt = function (r, c, t){
+            if(r.length === c.length){
+                let opt = 0
+                for(let i = 0; i < r.length; i++){
+                   opt += r[i] * c[i] * t
+                }
+                return opt
+            } else {
+                return 0
+            }
+        }
+
+        // Segunda parte
+        const K = 2500
+        const TIEMPO = 10
+        let P_OPT = 0
+
+        for(let t = 1; t <= TIEMPO; t++){
+            P_OPT += pOpt(ram,cpu,t)
+
+            if(P_OPT > K){
+                console.log("Error: ", P_OPT, t)
+                break
+            }
+        }
+
+
+    </script>
+</body>
+</html>
