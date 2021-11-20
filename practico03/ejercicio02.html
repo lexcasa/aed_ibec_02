@@ -19,15 +19,33 @@
             // x: es distinto al primer elemento de arr1
             // Pero esta incluido en el array
             // z: es distinto de 15 -> Ultimo elemento del arr1
+            // return x + y
 
             // Condicional 2
             // z: esta incluido en arra2
             // z: es distinto al ultimo elemento de arr2
+            // z + 1
 
             // Condicional 3
             // Si no cumple condicion 1 ni 2
             // Entonces retorna 1/2
+            // !=
         // 
+
+        // arr1[ arr1.length -1]
+        // arr1.includes(x) -> x esta incluido en arr1
+        
+        const f_xyz = function (x,y,z) {
+            const cond1 = (x !== arr1[0] && arr1.includes(x) && z !== arr1[arr1.length-1])
+            const cond2 = (arr2.includes(z) && z !== arr2[arr2.length-1])
+            if(cond1){
+                return x + y
+            } else if(cond2){
+                return z + 1
+            } else {
+                return 1/2
+            } 
+        }
     </script>
 </body>
 </html>
