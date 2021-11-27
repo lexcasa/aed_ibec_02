@@ -1,0 +1,5 @@
+INPUT = [1,true,false,true,"C"]
+OUTPUT
+    w: [1]
+    z: [true,false,true]
+    x: [null]

@@ -1,0 +1,108 @@
+- Busqueda normal
+    - comparar dos variables que sean iguales de ambos lados
+
+    CASO 1 - IGUALDAD: 
+
+        A === B
+
+        - Donde A y B tienen el mismo valor y tipo
+
+        A = "Alex" type A -> String 
+        B = "ALEX" type B -> String
+
+        A y B difieren en el valor
+            -> Por que el texto se chequea mayusculas y minusculas
+            -> Asumo que A y B tienen valores iguales 
+                -> Descartar mayusculas y minusculas
+        
+        Convertir A y B a mayuscula
+        O convertir A y B a minuscula
+
+        A = "ALEX" o A = "alex"
+        B = "ALEX" o B = "alex" 
+
+            -> A.toUpperCase() === B.toUpperCase()
+
+    CASO 2 - INCLUSION: 
+
+        A incluido en B
+
+        A = "ab"
+        B = "ABACO"
+
+        Son del mismo tipo?
+        -> Si type string
+
+        Contienen el mismo valor?
+
+        A dentro de B -> Quiere decir si puedo encontrar "ab" dentro de "ABACO"
+
+            -> Descartando mayusculas y minusculas "ab" esta dentro de "abaco"
+
+            B.toUpperCase().includes( A.toUpperCase() )
+
+            "ABACO".icludes( "AB" ) -> true
+
+EJERCICIO 3
+    a)
+        INPUT = ["Aba","AAb","b","B"]
+        -> Dado un algoritmo
+        OUTPUT = ["Aba","AAb"]
+
+        IGUALDAD
+
+            -> FLAG === INPUT[0] SI ES true -> OUTPUT.push( INPUT[0] ) 
+            -> FLAG === INPUT[1] SI ES true -> OUTPUT.push( INPUT[1] )
+            -> FLAG === INPUT[2] SI ES true -> OUTPUT.push( INPUT[2] )
+            -> FLAG === INPUT[3] SI ES true -> OUTPUT.push( INPUT[3] )
+
+            const FLAG = "Aba"
+
+            COMP 1: FLAG === INPUT[0] -> true -> ["Aba"]
+            COMP 2: FLAG === INPUT[1] -> false
+
+            OUTPUT = ["Aba"]
+
+        INCLUSION
+
+            const FLAG = "ab"
+
+            -> INPUT[0].includes( FLAG ) SI ES true -> OUTPUT.push( INPUT[0] ) 
+            -> INPUT[1].includes( FLAG ) SI ES true -> OUTPUT.push( INPUT[1] )
+            -> INPUT[2].includes( FLAG ) SI ES true -> OUTPUT.push( INPUT[2] )
+            -> INPUT[3].includes( FLAG ) SI ES true -> OUTPUT.push( INPUT[3] )
+    
+ b)
+        INPUT  = ["Aba","Acc","b","B","c"]
+        OUTPUT = ["Acc","c"]
+
+            -> Cual es la operacion que voy a utilizar?
+                 -> IGUALDAD
+                 -> INCLUSION
+        IGUALDAD
+            -> Si defino un flag es plano
+            -> Ese flag puede tener 1 solo valor
+
+                FLAG = "Acc"
+                    -> ["Acc"]
+                FLAG = "c"
+                    -> ["c"]
+        INCLUSION
+            FLAG = "ac"
+                ["Acc"]
+
+            FLAG = "c"
+                ["Acc","c"]
+
+ c)
+        INPUT  = ["Aba","AcA","b","B","cc","cccA"]
+        OUTPUT = ["AcA","cc","cccA"]
+
+        INCLUSION
+            FLAG = "c"
+
+
+
+            
+
+
